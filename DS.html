@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataScience Website</title>
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f4f8;
+        color: #333;
+      }
+      header {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        overflow: hidden; 
+      }
+      .gvpimage {
+        width: 100%;
+        height: auto;
+        margin-right: 20px;
+      }
+      .text {
+        text-align: center;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        animation: zoom-out 1.5s ease-out forwards;
+      }
+
+    
+      @keyframes zoom-out {
+        0% {
+          transform: scale(1.5); 
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1); 
+          opacity: 1;
+        }
+      }
+
+      
+      .dslogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .dslogo img {
+        max-width: 100%; 
+        height: auto;
+        max-height: 200px; 
+        margin: 0 auto; 
+        border-radius: 15px;
+        animation: zoom-out 1.5s ease-out forwards;
+      }
+
+      .dslogo h2 {
+        color: #333;
+        font-size: 28px;
+        margin-top: 10px;
+      }
+
+      .eventbox {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 22px;
+        text-align: center;
+        background-color: #f7f7f7;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 15px;
+        cursor: pointer;
+      }
+      .eventbox:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background-color: #e9ecef;
+      }
+      .events {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .credits-block {
+        padding: 40px;
+        margin: 20px;
+        background-color: #003366;
+      }
+      .team-block {
+        text-align: center;
+        background-color: white;
+        padding: 40px;
+      }
+
+      .team-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .flip-card {
+        background-color: transparent;
+        width: 200px; 
+        height: 300px;
+        perspective: 1000px;
+        margin: 20px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        border-radius: 10px;
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      .flip-card-front {
+        background-color: #fff;
+        color: black;
+        padding: 10px;
+      }
+
+      .flip-card-front h3 {
+        margin: 10px 0;
+        font-size: 1.2em;
+      }
+
+      .flip-card-front p {
+        margin: 5px 0;
+        font-size: 1em;
+        color: #666;
+      }
+
+      .flip-card-back {
+        background-color: #003366;
+        color: white;
+        transform: rotateY(180deg);
+        padding: 10px;
+      }
+
+      .team-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+
+      .team-img-back {
+        max-width: 100%; 
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .contact-info {
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: white;
+        text-align: center;
+      }
+
+      footer {
+        background-color: #003366;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+     
+@media (max-width: 777px) {
+  .flip-card-inner {
+    transform: none !important;
+    transition: none !important;
+    font-style: normal !important;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: none !important;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    backface-visibility: visible;
+    transform: none !important;
+  }
+
+  
+  .flip-card-front p {
+    display: none;
+  }
+
+  
+  .flip-card-front h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: normal; 
+  }
+
+ 
+  .team-heading {
+    font-size: 1.8em;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: normal;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="gvplogo">
+        <br />
+        <img src="GVPlogo.jpg" class="gvpimage" alt="GVP Logo" />
+        <div class="text">
+          <h1>GVP DATA SCIENCE CLUB</h1>
+          <h3>In Data we trust. In Insights we Believe</h3>
+        </div>
+      </div>
+    </header>
+    <div class="dslogo">
+      <img src="DSlogo.jpg" alt="Data science club logo" class="logo" />
+      <h2
+        style="
+          text-align: center;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+            sans-serif;
+        "
+      >
+        Welcome to the GVP Data Science Club, where data drives Innovation!
+      </h2>
+    </div>
+    <div>
+      <h2 style="text-align: center">Upcoming Events</h2>
+      <div class="events">
+        <p class="eventbox">Data Science Inauguration</p>
+        <p class="eventbox">Data Science Hackathon</p>
+        <p class="eventbox">Data visualization workshop</p>
+        <p class="eventbox">Research Projects</p>
+      </div>
+    </div>
+    <section id="credits" class="credits-block parallax fade-in-slow">
+      <h2 style="text-align: center; color: white">Credits</h2>
+      <p style="color: white; text-align: center">
+        This website is created by the GVP Data Science Club under the guidance
+        of the GVP Tech Department. Special thanks to all contributors and
+        mentors.
+      </p>
+    </section>
+    <section id="team" class="team-block">
+      <h2>Meet the Team</h2>
+      <div class="team-container">
+        <div class="team-member flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>S.Bhuvana Sandhya</h3>
+              <p>President</p>
+            </div>
+            <div class="flip-card-back">
+              <img
+                src="DSlogo.jpg"
+                alt="S.Bhuvana Sandhya"
+                class="team-img-back"
+              />
+              <div class="contact-info">
+                <p>Phone: +91-9705711116</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Pranay Varanasi</h3>
+              <p>Vice President</p>
+            </div>
+            <div class="flip-card-back">
+              <img
+                src="Pranay.jpg"
+                alt="Pranay Varanasi"
+                class="team-img-back"
+              />
+              <div class="contact-info">
+                <p>Phone: +91-8367320827</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>K.Veneela Rishitha</h3>
+              <p>Treasurer</p>
+            </div>
+            <div class="flip-card-back">
+              <img
+                src="Rishitha.jpg"
+                alt="K.Veneela Rishitha"
+                class="team-img-back"
+              />
+              <div class="contact-info">
+                <p>Phone: +91-9491872477</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>M.Kavya Sri</h3>
+              <p>Organizing Lead</p>
+            </div>
+            <div class="flip-card-back">
+              <img src="Kavya.jpg" alt="M.Kavya Sri" class="team-img-back" />
+              <div class="contact-info">
+                <p>Phone: +91-7093372841</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Amish Satwik</h3>
+              <p>Photography Lead</p>
+            </div>
+            <div class="flip-card-back">
+              <img
+                src="DSlogo.jpg"
+                alt="Amish Satwik"
+                class="team-img-back"
+              />
+              <div class="contact-info">
+                <p>Phone: +91-8341177050</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>P.Vinod Kumar</h3>
+              <p>Poster Designing Lead</p>
+            </div>
+            <div class="flip-card-back">
+              <img
+                src="DSlogo.jpg"
+                alt="P.Vinod Kumar"
+                class="team-img-back"
+              />
+              <div class="contact-info">
+                <p>Phone: +91-8500892684</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>B.Bhanusri</h3>
+              <p>Web Designing Lead</p>
+            </div>
+            <div class="flip-card-back">
+              <img src="Bhanu.jpg" alt="B.Bhanusri" class="team-img-back" />
+              <div class="contact-info">
+                <p>Phone: +91-6303574646</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>K.Ayyappa Ganesh</h3>
+              <p>Documentation Lead</p>
+            </div>
+            <div class="flip-card-back">
+              <img
+                src="Ayyappa.jpg"
+                alt="K.Ayyappa Ganesh"
+                class="team-img-back"
+              />
+              <div class="contact-info">
+                <p>Phone: +91-9177688167</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>CH. Sravan Kumar</h3>
+              <p>Video Editing Lead</p>
+            </div>
+            <div class="flip-card-back">
+              <img
+                src="Sravan kumar.jpg"
+                alt="CH. Sravan Kumar"
+                class="team-img-back"
+              />
+              <div class="contact-info">
+                <p>Phone: +91-9966495564</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <p>Connect with us:</p>
+        <a
+          href="https://www.instagram.com/datascience_club_gvpce?igsh=MXV0Z2hrOHcwa3JlZw== "
+          target="_blank"
+          class="social-link"
+          >Instagram</a
+        >
+        |
+        <a href="https://twitter.com" target="_blank" class="social-link"
+          >Twitter</a
+        >
+        |
+        <a href="https://linkedin.com" target="_blank" class="social-link"
+          >LinkedIn</a
+        >
+        <p>© 2024 GVP Data Science Club. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
