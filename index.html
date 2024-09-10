@@ -71,7 +71,7 @@
         margin-top: 10px;
       }
 
-      .eventbox {
+      /* .eventbox {
         border: 1px solid #ccc;
         padding: 10px;
         border-radius: 10px;
@@ -96,6 +96,57 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
+      } */
+      .section-title {
+        text-align: center;
+        font-size: 28px;
+        margin: 20px 0;
+        color: #003366;
+      }
+
+      /* Styles for each section */
+      .section-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+        background-color: #f7f7f7;
+      }
+
+      .section-box {
+        background-color: white;
+        width: 400px;
+        
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 15px;
+        text-align: center;
+      }
+
+      .section-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Heading styles inside the boxes */
+      .section-box h3 {
+        font-size: 22px;
+        color: white;
+        font-weight: normal;
+        background-color: #007bff;
+        margin-bottom: 5px;
+        padding: 6px;
+        margin-top: 0px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* Paragraph styles inside the boxes */
+      .section-box p {
+        font-size: 18px;
+        color: black;
       }
       .credits-block {
         padding: 40px;
@@ -209,7 +260,15 @@
       footer a:hover {
         text-decoration: underline;
       }
-
+      .news-item, .event-item, .notice-item {
+    background-color: white;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 5px 10px rgba(83, 75, 75, 0.1);
+    
+}
      
 @media (max-width: 777px) {
   .flip-card-inner {
@@ -233,7 +292,8 @@
     display: none;
   }
 
-  
+
+
   .flip-card-front h3 {
     font-size: 1.2em;
     color: #333;
@@ -278,13 +338,48 @@
         Welcome to the GVP Data Science Club, where data drives Innovation!
       </h2>
     </div>
-    <div>
+    <!-- <div>
       <h2 style="text-align: center">Upcoming Events</h2>
       <div class="events">
         <p class="eventbox">Data Science Inauguration</p>
         <p class="eventbox">Data Science Hackathon</p>
         <p class="eventbox">Data visualization workshop</p>
         <p class="eventbox">Research Projects</p>
+      </div>
+    </div> -->
+    <div></div>
+      <!-- <h2 class="section-title">Latest News, Events, and Notice Board</h2> -->
+      <div class="section-container">
+        <!-- Latest News Section -->
+        <div class="section-box">
+          <h3>Latest News</h3>
+          <div class="news-item">24 May 2022: Incubation Center </div>
+        <div class="news-item">31 Mar 2022: Institutional Distinctiveness </div>
+        <div class="news-item">31 Mar 2022: Academic Calendar Session 2019-20 </div>
+        <div class="news-item">16 Feb 2022: PhD Merit List Part 01_16 Feb 2022 </div>
+        <div class="news-item">16 Feb 2022: PhD Merit List Part 02_16 Feb 2022 </div>
+        <div class="news-item">17 Oct 2022: Consolidate Academic Calendar </div>
+        </div>
+
+        <!-- Upcoming Events Section -->
+        <div class="section-box">
+          <h3>Upcoming Events</h3>
+          <div class="event-item">29 April: Seminar is conducted on BCA courses.</div>
+        <div class="event-item">30 April: Seminar is conducted on B.Com courses.</div>
+        <div class="event-item">2 March: Conducted its 2nd convocation ceremony.</div>
+        <div class="event-item">5 March: Annual Meeting for Batch of BBA (2018 to 2021) and seminar will be conducted for future growth and opportunity.</div>
+        </div>
+
+        <!-- Notice Board Section -->
+        <div class="section-box">
+          <h3>Notice Board</h3>
+          <div class="notice-item">Participation in Climate Correction Day (CCD) Challenge for Mission LiFE</div>
+        <div class="notice-item">West Zone Inter University Table Tennis (Men) Tournament 2022-23</div>
+        <div class="notice-item">PhD Registration Form for Selected Candidates</div>
+        <div class="notice-item">List of Activities Organised Under TEQIP-III</div>
+        <div class="notice-item">Documents for Empanelment of Vendor for A Class Contractor</div>
+        <div class="notice-item">School of Architecture College Level Counselling 2022-23</div>
+        </div>
       </div>
     </div>
     <section id="credits" class="credits-block parallax fade-in-slow">
