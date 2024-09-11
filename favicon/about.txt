@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Kay Pho Du
+- Font Author: Copyright (c) 2019-2023 SIL International, based on the overall design of Karenni (Copyright (c) 2016-2019, Khu Oo Reh).
+- Font Source: https://fonts.gstatic.com/s/kayphodu/v2/jizfREFPvGNOx-jhPwHR4OmnLD0Z4zM.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

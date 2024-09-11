@@ -6,8 +6,14 @@
     <meta name="description" content="GVP Data Science Club">
     <meta name="keywords" content="GVP, Data Science, Club, Events, Team">
     <meta name="author" content="Bhanu Sri">
+    <meta name="google-site-verification" content="0ckDOucirAttgTczZOU2_A2pYF1Z-_rW-F5p_mZnhf4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <title>Data Science Club</title>
         <meta name="language" content="english">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
         <meta name="Data Science Club"/>
         <meta name="author" content="Data Science"> 
         <meta name="robots" content="index,follow" />
@@ -24,6 +30,12 @@
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
     <title>DataScience Website</title>
     <style>
+      *{
+        scroll-behavior: smooth;
+        text-decoration: none;
+        box-sizing: border-box;
+        outline: none;
+      }
       body {
         font-family: "Open Sans", sans-serif;
         margin: 0;
@@ -263,7 +275,14 @@
     box-shadow: 0 5px 10px rgba(83, 75, 75, 0.1);
     
 }
-     
+.type-writer{
+    color: rgb(171, 211, 217);
+    font-size: 15px;
+    font-size: xx-large;
+}
+.auto-type{
+    color: red;
+} 
 @media (max-width: 777px) {
   .flip-card-inner {
     transform: none !important;
@@ -285,7 +304,6 @@
   .flip-card-front p {
     display: none;
   }
-
 
 
   .flip-card-front h3 {
@@ -321,7 +339,7 @@
     </header>
     <div class="dslogo">
       <img src="DSlogo.jpg" alt="Data science club logo" class="logo" loading="lazy"/>
-      <h3
+      <!-- <h3
         style="
           text-align: center;
           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -330,7 +348,10 @@
         "
       >
         Welcome to the GVP Data Science Club, where data drives Innovation!
-      </h3>
+      </h3> -->
+      <div class="container2">
+        <h1 class="type-writer">We turn Data into...   <span class="auto-type"></span></h1>
+      </div>
     </div>
 
     <div></div>
@@ -339,7 +360,7 @@
         <!-- Latest News Section -->
         <div class="section-box">
           <h3>Latest News</h3>
-          <div class="news-item">24 May 2022: Incubation Center </div>
+          <div class="news-item"><a>24 May 2022: Incubation Center </a></div>
         <div class="news-item">31 Mar 2022: Institutional Distinctiveness </div>
         <div class="news-item">31 Mar 2022: Academic Calendar Session 2019-20 </div>
         <div class="news-item">16 Feb 2022: PhD Merit List Part 01_16 Feb 2022 </div>
@@ -562,6 +583,16 @@
           >LinkedIn</a
         >
         <p>© 2024 GVP Data Science Club. All rights reserved.</p>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed=new Typed(".auto-type",{
+        strings :["Actionable Insights","Powerful Predictions","Informed Decisions","Strategic Advantages","Innovative Solutions","Clear Visualizations","Accurate Forecasts","Data-Driven Strategies","Enhanced Performance","Market Analysis"
+        ],
+        typeSpeed:150,
+        backSpeed:150,
+        looped:true,
+      })
+    </script>
       </div>
     </footer>
   </body>
