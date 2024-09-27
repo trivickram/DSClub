@@ -680,13 +680,17 @@
         <p>© 2024 GVP Data Science Club. All rights reserved.</p>
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-      var typed=new Typed(".auto-type",{
-        strings :["Actionable Insights","Powerful Predictions","Informed Decisions","Strategic Advantages","Innovative Solutions","Clear Visualizations","Accurate Forecasts","Data-Driven Strategies","Enhanced Performance","Market Analysis"
+      if (typeof Typed !== 'undefined') {
+        const typed = new Typed('.auto-type', {
+          strings :["Actionable Insights","Powerful Predictions","Informed Decisions","Strategic Advantages","Innovative Solutions","Clear Visualizations","Accurate Forecasts","Data-Driven Strategies","Enhanced Performance","Market Analysis"
         ],
-        typeSpeed:150,
-        backSpeed:150,
-        looped:true,
-      })
+          typeSpeed: 150,
+          backSpeed: 150,
+          loop: true,
+        });
+      } else {
+        console.error('Typed.js library not loaded');
+      }
     </script>
       </div>
     </footer>
