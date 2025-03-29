@@ -133,28 +133,36 @@
       }
 
       header {
-        background-color: #003366;
-        color: white;
+        background-color: black;
+        /* color: white; */
         text-align: center;
         padding: 20px;
         position: relative;
         overflow: hidden; 
       }
-      .gvpimage {
-        width: 100%;
-        height: auto;
-        margin-right: 20px;
-      }
       .text {
         text-align: center;
-        color: white;
+        color: #ffffff;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
           sans-serif;
         animation: zoom-out 1.5s ease-out forwards;
       }
 
-    
+      .letter { 
+  background: linear-gradient(90deg, #a855f7, #06b6d4, #9333ea, #22d3ee);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s infinite linear;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
       @keyframes zoom-out {
         0% {
           transform: scale(1.5); 
@@ -165,8 +173,9 @@
           opacity: 1;
         }
       }
-
-      
+      /* .letter{
+        color: rgb(58, 215, 50);
+      } */
       .dslogo {
         display: flex;
         justify-content: center;
@@ -194,9 +203,11 @@
         text-align: center;
         font-size: 28px;
         margin: 20px 0;
-        color: #003366;
+        color: black;
       }
-
+      .college{
+        color: #06b6d4;
+      }
       /* Styles for each section */
       .section-container {
         display: flex;
@@ -209,7 +220,6 @@
       .section-box {
         background-color: white;
         width: 400px;
-        
         padding: 15px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -245,7 +255,7 @@
       .credits-block {
         padding: 40px;
         margin: 20px;
-        background-color: #003366;
+        background-color: black;
       }
       .team-block {
         text-align: center;
@@ -312,7 +322,7 @@
       }
 
       .flip-card-back {
-        background-color: #003366;
+        background-color:black;
         color: white;
         transform: rotateY(180deg);
         padding: 10px;
@@ -342,7 +352,7 @@
       }
 
       footer {
-        background-color: #003366;
+        background-color:black;
         color: white;
         padding: 20px;
         text-align: center;
@@ -392,10 +402,15 @@
     transform: none !important;
   }
 
-  
+  /* .college-name .letter {
+    font-size: 1.5em;
+    color: wheat;
+    font-weight: bold; 
+  } */
   .flip-card-front p {
     display: none;
   }
+
 
 
   .flip-card-front h3 {
@@ -425,9 +440,12 @@
   <body>
       <div class="gvplogo">
         <br />
-        <img src="GVPlogo.jpg" class="gvpimage" alt="GVP Logo" width="300" height="200"/>
+        <div class="College-name">
+          <h1 class="college"><span class="letter">I</span>ndraprastha <span class="letter">I</span>nstitute <span class="letter">O</span>f<span class="letter">  T</span>echnology </h1>
+        </div>
+        <!-- <img src="GVPlogo.jpg" class="gvpimage" alt="GVP Logo" width="300" height="200"/> -->
         <div class="text">
-          <h1>GVP DATA SCIENCE CLUB</h1>
+          <h1>DATA SCIENCE CLUB</h1>
           <h2>In Data we trust. In Insights we Believe</h2>
         </div>
       </div>
@@ -498,13 +516,13 @@
         <div class="team-member flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <h3>S.Bhuvana Sandhya</h3>
+              <h3>Lucas Reynolds</h3>
               <p>President</p>
             </div>
             <div class="flip-card-back">
               <img
                 src="c54f450ab1de957b385a340d3605f3c9.jpg"
-                alt="S.Bhuvana Sandhya"
+                alt="Lucas Reynolds"
                 class="team-img-back"
               />
               <div class="contact-info">
@@ -517,13 +535,13 @@
         <div class="team-member flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <h3>Pranay Varanasi</h3>
+              <h3>Sophia Martinez</h3>
               <p>Vice President</p>
             </div>
             <div class="flip-card-back">
               <img
                 src="avatar-icon-human-a-person-s-badge-social-media-profile-symbol-the-symbol-of-a-person-vector.jpg"
-                alt="Pranay Varanasi"
+                alt="Sophia Martinez"
                 class="team-img-back"
               />
               <div class="contact-info">
@@ -536,13 +554,13 @@
         <div class="team-member flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <h3>K.Veneela Rishitha</h3>
+              <h3>Ava Thompson</h3>
               <p>Treasurer</p>
             </div>
             <div class="flip-card-back">
               <img
                 src="c54f450ab1de957b385a340d3605f3c9.jpg"
-                alt="K.Veneela Rishitha"
+                alt="Ava Thompson"
                 class="team-img-back"
               />
               <div class="contact-info">
@@ -555,11 +573,11 @@
         <div class="team-member flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <h3>M.Kavya Sri</h3>
+              <h3>Benjamin Hayes</h3>
               <p>Organizing Lead</p>
             </div>
             <div class="flip-card-back">
-              <img src="c54f450ab1de957b385a340d3605f3c9.jpg" alt="M.Kavya Sri" class="team-img-back" />
+              <img src="c54f450ab1de957b385a340d3605f3c9.jpg" alt="Benjamin Hayes" class="team-img-back" />
               <div class="contact-info">
                 <p>Phone: +91-8867890006</p>
               </div>
@@ -570,7 +588,7 @@
         <div class="team-member flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <h3>B.Bhanu Sri</h3>
+              <h3>Bhanu Sri</h3>
               <p>Web Designing Lead</p>
             </div>
             <div class="flip-card-back">
@@ -589,13 +607,13 @@
         <div class="team-member flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <h3>P.Vinod Kumar</h3>
+              <h3>Emily Foster</h3>
               <p>Poster Designing Lead</p>
             </div>
             <div class="flip-card-back">
               <img
                 src="avatar-icon-human-a-person-s-badge-social-media-profile-symbol-the-symbol-of-a-person-vector.jpg"
-                alt="P.Vinod Kumar"
+                alt="Emily Foster"
                 class="team-img-back"
               />
               <div class="contact-info">
@@ -608,11 +626,11 @@
         <div class="team-member flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <h3>Amish Satwik</h3>
+              <h3>Caleb Simmons</h3>
               <p>Photography Lead</p>
             </div>
             <div class="flip-card-back">
-              <img src="avatar-icon-human-a-person-s-badge-social-media-profile-symbol-the-symbol-of-a-person-vector.jpg" alt="Amish Satwik" class="team-img-back" />
+              <img src="avatar-icon-human-a-person-s-badge-social-media-profile-symbol-the-symbol-of-a-person-vector.jpg" alt="Caleb Simmons" class="team-img-back" />
               <div class="contact-info">
                 <p>Phone: +91-8867890009</p>
               </div>
@@ -623,13 +641,13 @@
         <div class="team-member flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <h3>K.Ayyappa Ganesh</h3>
+              <h3>Zoe Parker</h3>
               <p>Documentation Lead</p>
             </div>
             <div class="flip-card-back">
               <img
                 src="avatar-icon-human-a-person-s-badge-social-media-profile-symbol-the-symbol-of-a-person-vector.jpg"
-                alt="K.Ayyappa Ganesh"
+                alt="Zoe Parker"
                 class="team-img-back"
               />
               <div class="contact-info">
@@ -642,13 +660,13 @@
         <div class="team-member flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <h3>CH. Sravan Kumar</h3>
+              <h3>Brooks</h3>
               <p>Video Editing Lead</p>
             </div>
             <div class="flip-card-back">
               <img
                 src="avatar-icon-human-a-person-s-badge-social-media-profile-symbol-the-symbol-of-a-person-vector.jpg"
-                alt="CH. Sravan Kumar"
+                alt="Brooks"
                 class="team-img-back"
               />
               <div class="contact-info">
@@ -664,17 +682,17 @@
       <div class="footer-container">
         <p>Connect with us:</p>
         <a
-          href="https://www.instagram.com/datascience_club_gvpce?igsh=MXV0Z2hrOHcwa3JlZw== "
+          href="#"
           target="_blank"
           class="social-link"
           >Instagram</a
         >
         |
-        <a href="https://twitter.com" target="_blank" class="social-link"
+        <a href="#" target="_blank" class="social-link"
           >Twitter</a
         >
         |
-        <a href="https://linkedin.com" target="_blank" class="social-link"
+        <a href="#" target="_blank" class="social-link"
           >LinkedIn</a
         >
         <p>© 2024 GVP Data Science Club. All rights reserved.</p>
